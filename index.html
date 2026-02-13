@@ -553,7 +553,7 @@
     </style>
 </head>
 <body>
-    <!-- VERIFICATION OVERLAY -->
+    <!-- VERIFICATION OVERLAY DENGAN PASSWORD "andre" -->
     <div id="verificationOverlay">
         <div class="verification-box">
             <h2>🔐 VERIFIKASI</h2>
@@ -566,9 +566,10 @@
             <input type="text" id="verificationInput" class="verification-input" 
                    placeholder="masukkan jawaban di sini...">
             
+            <!-- PETUNJUK PASSWORD BARU -->
             <div class="password-hint">
                 <i class="fas fa-key" style="margin-right: 0.5rem;"></i>
-                petunjuk: cari tau sendiri dek awokawok 
+                petunjuk: coba ketik "andre"
             </div>
             
             <button class="verification-btn" id="verifyBtn">VERIFIKASI</button>
@@ -676,5 +677,4 @@
                 </div>
 
                 <div class="game-card" onclick="this.querySelector('.game-result').innerHTML = '🎯 angka ' + Math.floor(Math.random()*10) + ' | ' + (Math.random() > 0.5 ? 'menang' : 'coba lagi')">
-                    <div class="game-icon"><i class="fas fa-dice"></i></div>
-               
+                    <div class="game-icon"><i c
