@@ -27,14 +27,12 @@
             line-height: 1.6;
         }
 
-        /* Font untuk cerpen */
         .font-letter {
             font-family: 'Special Elite', 'Courier Prime', monospace;
             letter-spacing: 0.5px;
             line-height: 2;
         }
 
-        /* Sastra font */
         h1, h2, h3, .sastra {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 600;
@@ -142,7 +140,6 @@
             min-height: 1.5rem;
         }
 
-        /* SLIDE 2 (awalnya tersembunyi) */
         #slide2 {
             display: none;
             opacity: 0;
@@ -217,7 +214,7 @@
             color: #0f1a2b;
         }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -314,26 +311,6 @@
             color: #0f1a2b;
         }
 
-        /* SECTION HEADER */
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            color: #d8bfd8;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-sub {
-            color: #b6c4d9;
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        /* GRID UNTUK 10 MINIGAME */
         .games-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -381,7 +358,6 @@
             color: #d8bfd8;
         }
 
-        /* CARD INTERAKTIF */
         .interaktif-box {
             background: rgba(216,191,216,0.05);
             padding: 2rem;
@@ -389,7 +365,6 @@
             border: 1px solid rgba(216,191,216,0.2);
         }
 
-        /* PROGRESS BAR */
         .progress-container {
             background: rgba(255,255,255,0.1);
             height: 10px;
@@ -403,7 +378,6 @@
             border-radius: 10px;
         }
 
-        /* GALERI */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -443,18 +417,10 @@
             opacity: 1;
         }
 
-        /* AUDIO */
-        .audio-wrapper {
-            background: rgba(216,191,216,0.1);
-            padding: 1.5rem;
-            border-radius: 50px;
-        }
-
         audio {
             width: 100%;
         }
 
-        /* SLIDE 2 - CERPEN */
         .cerpen-container {
             max-width: 800px;
             margin: 0 auto;
@@ -498,7 +464,6 @@
             color: #b45f6b;
         }
 
-        /* KOMENTAR WA */
         .komentar-section {
             max-width: 800px;
             margin: 3rem auto;
@@ -551,7 +516,6 @@
             color: #d8bfd8;
         }
 
-        /* FOOTER */
         .footer {
             text-align: center;
             padding: 3rem;
@@ -559,7 +523,6 @@
             margin-top: 3rem;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 1200px) {
             .games-grid {
                 grid-template-columns: repeat(3, 1fr);
@@ -590,7 +553,7 @@
     </style>
 </head>
 <body>
-    <!-- VERIFICATION OVERLAY DENGAN FITUR LUPA SANDI -->
+    <!-- VERIFICATION OVERLAY -->
     <div id="verificationOverlay">
         <div class="verification-box">
             <h2>🔐 VERIFIKASI</h2>
@@ -603,15 +566,13 @@
             <input type="text" id="verificationInput" class="verification-input" 
                    placeholder="masukkan jawaban di sini...">
             
-            <!-- PETUNJUK PASSWORD (TERTULIS) -->
             <div class="password-hint">
                 <i class="fas fa-key" style="margin-right: 0.5rem;"></i>
-                petunjuk: coba ketik "iya, aku haura cewenya andre"
+                petunjuk: cari tau sendiri dek awokawok 
             </div>
             
             <button class="verification-btn" id="verifyBtn">VERIFIKASI</button>
             
-            <!-- FITUR LUPA KATA SANDI (REDIRECT KE WA) -->
             <div class="forgot-password">
                 <a href="https://wa.me/6287838077640?text=Halo%20andre%2C%20aku%20lupa%20kata%20sandinya" 
                    target="_blank" id="lupaSandi">
@@ -637,7 +598,6 @@
 
     <!-- SLIDE 1 -->
     <div id="slide1">
-        <!-- HERO SECTION -->
         <section class="hero" id="home">
             <div class="hero-content">
                 <h1>UNTUK <span>HAURA</span></h1>
@@ -666,7 +626,6 @@
                     <button class="slider-btn" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
                 </div>
                 
-                <!-- AUDIO 1 (OTOMATIS) -->
                 <audio id="lagu1" loop autoplay>
                     <source src="lagu1.mp3" type="audio/mpeg">
                 </audio>
@@ -681,7 +640,6 @@
             </div>
 
             <div class="games-grid">
-                <!-- GAME 1 - RAHASIA HATI -->
                 <div class="game-card" onclick="this.querySelector('.game-result').innerHTML = '❤️ hatimu aman di sini'">
                     <div class="game-icon"><i class="fas fa-heart"></i></div>
                     <div class="game-title">rahasia hati</div>
@@ -689,7 +647,6 @@
                     <div class="game-result"></div>
                 </div>
 
-                <!-- GAME 2 - HITUNG CINTA -->
                 <div class="game-card" onclick="this.querySelector('.game-result').innerHTML = Math.floor(Math.random() * 30 + 70) + '% cinta'">
                     <div class="game-icon"><i class="fas fa-calculator"></i></div>
                     <div class="game-title">hitung cinta</div>
@@ -697,7 +654,27 @@
                     <div class="game-result"></div>
                 </div>
 
-                <!-- GAME 3 - BUKA PESAN -->
                 <div class="game-card" onclick="this.querySelector('.game-result').innerHTML = '🌹 aku sayang kamu'">
                     <div class="game-icon"><i class="fas fa-envelope"></i></div>
-                    <div class="game-title">buka 
+                    <div class="game-title">buka pesan</div>
+                    <div class="game-desc">pesan rahasia untukmu</div>
+                    <div class="game-result"></div>
+                </div>
+
+                <div class="game-card" onclick="this.querySelector('.game-result').innerHTML = '🔮 selamanya bersama'">
+                    <div class="game-icon"><i class="fas fa-crystal-ball"></i></div>
+                    <div class="game-title">ramalan cinta</div>
+                    <div class="game-desc">masa depan kita</div>
+                    <div class="game-result"></div>
+                </div>
+
+                <div class="game-card" onclick="this.querySelector('.game-result').innerHTML = '📜 kau adalah puisi'">
+                    <div class="game-icon"><i class="fas fa-feather"></i></div>
+                    <div class="game-title">puisi random</div>
+                    <div class="game-desc">seuntai kata untukmu</div>
+                    <div class="game-result"></div>
+                </div>
+
+                <div class="game-card" onclick="this.querySelector('.game-result').innerHTML = '🎯 angka ' + Math.floor(Math.random()*10) + ' | ' + (Math.random() > 0.5 ? 'menang' : 'coba lagi')">
+                    <div class="game-icon"><i class="fas fa-dice"></i></div>
+               
